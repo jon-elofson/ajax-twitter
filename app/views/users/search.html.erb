@@ -12,8 +12,13 @@
 <ul>
   <% @users.each do |user| %>
     <li>
+      <% if user.in_follows.where(follower_id: current_user.id).any? %>
+        <% follow_state = 'followed' %>
+      <% else %>
+        <% follow_state = 'unfollowed' %>
+      <% end %>
       <%= link_to user.username, user_url(user) %>
-      <%= render "follows/form", user: user %>
+      <%= render "follows/form", user: user, follow_state: follow_state %>
     </li>
   <% end %>
 </ul>
