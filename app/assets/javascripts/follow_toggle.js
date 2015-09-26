@@ -34,6 +34,7 @@ $.FollowToggle.prototype.handleClick = function (event) {
     $.ajax({
       url: urlString,
       type: "POST",
+      dataType: "json",
       success: function () {
         that.followState = "followed";
         that.render();
@@ -45,6 +46,7 @@ $.FollowToggle.prototype.handleClick = function (event) {
     $.ajax({
       url: urlString,
       type: "DELETE",
+      dataType: "json",
       success: function () {
         that.followState = "unfollowed";
         that.render();
