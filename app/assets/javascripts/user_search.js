@@ -1,6 +1,8 @@
 $.UserSearch = function (el) {
   this.$el = $(el);
-  debugger;
+  this.$input = this.$el.find('input');
+  this.$ul = this.$el.find('ul');
+
 };
 
 
