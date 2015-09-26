@@ -1,24 +1,9 @@
 <h1>Search!</h1>
 
-<form action="/users/search" method="GET">
-  <input
-    type="text"
-    name="query"
-    value="<%= @query %>">
-
-  <input type="submit" value="Search Users!">
-</form>
-
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <% if user.in_follows.where(follower_id: current_user.id).any? %>
-        <% follow_state = 'followed' %>
-      <% else %>
-        <% follow_state = 'unfollowed' %>
-      <% end %>
-      <%= link_to user.username, user_url(user) %>
-      <%= render "follows/form", user: user, follow_state: follow_state %>
-    </li>
-  <% end %>
-</ul>
+<div class="user-search">
+  <input type="text" id="users-search-bar">
+  <br>
+  <h3>Results</h3>
+  <ul class="users">
+  </ul>
+</div>
