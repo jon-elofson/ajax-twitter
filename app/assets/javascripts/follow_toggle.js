@@ -2,8 +2,6 @@ $.FollowToggle = function (el) {
   this.followState = $(el).attr('data-follow-state');
   this.userId = $(el).attr('data-user-id');
   this.$el = $(el);
-  this.$input = this.$el.find('input');
-  this.$ul = this.$el.find('ul');
   this.$el.on('click',this.handleClick.bind(this));
   this.render();
 };

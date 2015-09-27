@@ -12,6 +12,9 @@ $.UserSearch.prototype.render = function () {
   this.users.forEach(function (user) {
     var $li = $('<li>');
     $li.html(user.username);
+    var $button = $('<button>');
+    $button.followToggle();
+    $li.append($button);
     that.$ul.append($li);
   });
 };
