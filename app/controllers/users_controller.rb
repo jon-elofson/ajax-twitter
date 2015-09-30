@@ -45,6 +45,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    if params[:mood].present?
+      current_user.update(mood: params[:mood])
+    end
+    render :json => current_user
+  end
+
   protected
   def user_params
     self.params.require(:user).permit(:username, :password)

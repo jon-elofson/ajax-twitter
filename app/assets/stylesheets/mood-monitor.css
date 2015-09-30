@@ -1,0 +1,27 @@
+button.plus {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: pink;
+  border-color: pink;
+}
+
+button.minus {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: blue;
+  border-color: blue;
+}
+
+div.mood-display {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 30px;
+  color: black;
+}

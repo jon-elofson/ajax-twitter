@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require follow_toggle
 //= require user_search
+//= require mood_monitor
